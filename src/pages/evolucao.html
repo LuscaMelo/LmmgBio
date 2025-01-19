@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body class="max-w-[1920px] mx-auto relative bg-light">
+    <header class="lg:sticky fixed flex items-center justify-between w-full h-[50px] lg:h-[5vh] bg-brand px-5 z-[50]">
+        <div class="flex items-center gap-4">
+            <i id="menu-toggle" class="bi bi-list text-3xl lg:hidden cursor-pointer text-dark"></i>
+            <img class="w-[37px]" src="../images/image.png" alt="Ícone do usuário" srcset="">
+            <h5 class="hidden md:block">Seja bem-vindo, <span class="font-bold">José da Silva</span></h5>
+        </div>
+        <div>
+            <button class="bg-light hover:bg-zinc-800 duration-300 px-5 py-1 rounded-md text-brand">Deslogar</button>
+        </div>
+    </header>
+
+    <main class="flex pt-[5vh] lg:pt-0">
+        <aside id="mobile-menu"
+            class="w-[330px] h-[95vh] mt-[5vh] lg:mt-0 bg-dark pt-4 px-4 z-[40] fixed left-0 top-0 transform -translate-x-full lg:translate-x-0 lg:relative transition-transform duration-300 overflow-y-scroll no-scrollbar">
+            <div class="w-full flex justify-center py-7">
+                <img src="../images/logo.png" alt="Logotipo da LmmgBio" srcset="">
+            </div>
+            <nav class="mt-3 text-white">
+                <div class="relative w-full">
+                    <button id="dropdown-button"
+                        class="bg-transparent border border-brand rounded-2xl flex justify-between items-center w-full px-4">
+                        <p>Nome da obra</p>
+                        <i class="bi bi-plus-circle-fill text-2xl text-brand"></i>
+                    </button>
+                    <ul id="dropdown-menu"
+                        class="absolute left-0 top-full mt-2 w-full bg-dark border border-brand rounded-lg hidden">
+                        <li class="py-2 px-4 hover:bg-brand hover:text-white cursor-pointer">Nome da Obra 1
+                        </li>
+                        <li class="py-2 px-4 hover:bg-brand hover:text-white cursor-pointer">Nome da Obra 2
+                        </li>
+                        <li class="py-2 px-4 hover:bg-brand hover:text-white cursor-pointer">Nome da Obra 3
+                        </li>
+                    </ul>
+                </div>
+                <ul class="mt-4">
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./overview.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-eye-fill text-2xl text-brand cursor-pointer"></i>
+                                <span>Overview</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./evolucao.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-graph-up-arrow text-2xl text-brand cursor-pointer"></i>
+                                <span class="font-bold">Evolução</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./cronograma.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-calendar-week-fill text-2xl text-brand cursor-pointer"></i>
+                                <span>Cronograma</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./banco-de-imagens.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-file-earmark-image text-2xl text-brand cursor-pointer"></i>
+                                <span>Banco de Imagem</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./dual-view.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-input-cursor text-2xl text-brand cursor-pointer"></i>
+                                <span>Dual View</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="videos-toggle"
+                            class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300 cursor-pointer">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-play-circle text-2xl text-brand"></i>
+                                <span">Vídeos</span>
+                            </div>
+                            <i id="chevron-icon"
+                                class="bi bi-chevron-right text-brand transition-transform duration-300"></i>
+                        </div>
+                        <ul id="videos-submenu"
+                            class="overflow-hidden text-sm max-h-0 transition-all duration-500 ease-in-out">
+                            <li class="py-2 mt-2">
+                                <a class="hover:text-brand duration-300" href="./time-lapse.html">Time Lapse</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:text-brand duration-300"
+                                    href="./evolucao-com-detalhamento.html">Evolução com Detalhamento</a>
+                            </li>
+                            <li class="py-2 mb-4">
+                                <a class="hover:text-brand duration-300" href="./evolucao-com-graficos.html">Evolução
+                                    com Gráficos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./relatorios.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-filetype-pdf text-2xl text-brand cursor-pointer"></i>
+                                <span>Extrair relatórios PDF</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./banco-de-dados.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-database text-2xl text-brand cursor-pointer"></i>
+                                <span>Banco de Dados (ENG)</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center justify-between py-3 border-b border-zinc-600 hover:text-brand duration-300"
+                            href="./documentos.html">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-filetype-doc text-2xl text-brand cursor-pointer"></i>
+                                <span>Documentos</span>
+                            </div>
+                            <i class="bi bi-chevron-right text-brand"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Overlay -->
+        <div id="menu-overlay" class="bg-black opacity-60 absolute top-0 left-0 w-[100vw] h-full hidden lg:hidden">
+        </div>
+
+        <section class="bg-light p-3 lg:p-6 pt-16 lg:pt-12 w-full h-[95vh] text-white overflow-y-scroll no-scrollbar">
+            <h3 class="text-3xl md:text-[50px] font-bold text-gray-100">EVOLUÇÃO</h3>
+
+            <div class="bg-clear rounded-[2rem] overflow-hidden p-4 py-5 lg:p-7 mt-7">
+                <div class="flex flex-col 2xl:flex-row gap-16">
+                    <div class="md:min-w-[300px]">
+                        <ul class="max-w-[300px]">
+                            <li class="flex items-center justify-between pb-2 border-b border-brand">
+                                <div class="flex items-center gap-3">
+                                    <i class="bi bi-filter text-3xl text-brand cursor-pointer"></i>
+                                    <span class="text-brand font-bold">FILTROS</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between py-3 border-b border-zinc-600 mt-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="font-bold hover:text-brand duration-300 cursor-pointer">Evolução
+                                        Geral</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between py-3 border-b border-zinc-600">
+                                <div class="flex items-center gap-3">
+                                    <span class="hover:text-brand duration-300 cursor-pointer">Evolução por área</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between py-3 border-b border-zinc-600">
+                                <div class="flex items-center gap-3">
+                                    <span class="hover:text-brand duration-300 cursor-pointer">Evolução por
+                                        período</span>
+                                </div>
+                                <i class="bi bi-chevron-right text-brand"></i>
+                            </li>
+                            <li class="flex items-center justify-between py-3 border-b border-zinc-600">
+                                <div class="flex items-center gap-3">
+                                    <span class="hover:text-brand duration-300 cursor-pointer">Evolução por
+                                        empresa</span>
+                                </div>
+                                <i class="bi bi-chevron-right text-brand"></i>
+                            </li>
+                            <li class="flex items-center justify-between py-3 border-b border-zinc-600">
+                                <div class="flex items-center gap-3">
+                                    <span class="hover:text-brand duration-300 cursor-pointer">Observações</span>
+                                </div>
+                                <i class="bi bi-chevron-right text-brand"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full">
+                        <h4 class="font-bold">Evolução Geral</h4>
+                        <div class="w-full h-[300px] lg:h-[550px] bg-light mt-5">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-zinc-600 mt-7 text-gray-200">
+                    <p class="font-extralight text-sm text-center mt-5"><span class="font-bold me-2">Última atualização
+                            |</span>12/12/2025 às
+                        12:59 por
+                        José da Silva</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="../js/main.js"></script>
+
+</html>
